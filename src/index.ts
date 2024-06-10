@@ -71,7 +71,7 @@ const properties : Property[] = [
         isAvailable: false 
     },
     {
-        image: '/images/london-property.jpg',
+        image: 'images/london-property.jpg',
         title: 'London Flat',
         price: 25,
         location: {
@@ -84,7 +84,7 @@ const properties : Property[] = [
         isAvailable: true
     },
     {
-        image: '/images/malaysian-hotel.jpeg',
+        image: './images/malaysian-hotel.jpeg',
         title: 'Malia Hotel',
         price: 35,
         location: {
@@ -111,8 +111,9 @@ for (let i = 0; i < properties.length; i++) {
     const image = document.createElement('img')
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
-    showDetails(true, card, properties[i].price)
+    showDetails(you.permissions, card, properties[i].price)
     propertyContainer.appendChild(card)
+    console.log(typeof you.permissions)
 }
 
 let count = 0
@@ -137,7 +138,7 @@ footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + current
 
 
 let yourMainProperty = new MainProperty(
-    'images/italian-property.jpg', 
+    '/images/italian-property.jpg', 
     'Italian House',
     [{
         name: 'Olive',
@@ -151,4 +152,3 @@ const image = document.createElement('img')
 image.setAttribute('src', yourMainProperty.src)
 mainImageContainer.appendChild(image)
 
-console.log("Hello World!");
