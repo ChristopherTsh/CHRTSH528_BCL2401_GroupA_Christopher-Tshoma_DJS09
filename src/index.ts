@@ -1,12 +1,5 @@
-// Wrapping up our Dashboard
-// Style the 'Get Reviews' Button
-// Make the button green
-// Make the text white
-// Give the button a 5px border radius
-// Make the button turn yellow on hover
-
 import { showReviewTotal, populateUser, showDetails, getTopTwoReviews} from './utils'
-import { Price, Country } from './types'
+
 import { Permissions , LoyaltyUser } from './enums'
 import  Review  from './interfaces'
 const propertyContainer = document.querySelector('.properties')
@@ -28,12 +21,6 @@ enum LoyaltyUser {
     BRONZE_USER = 'BRONZE_USER'
 }
 
-interface Review {
-    name: string; 
-    stars: number; 
-    loyaltyUser: LoyaltyUser; 
-    date: string;   
-}
 
 // Reviews
 const reviews: Review[] = [
