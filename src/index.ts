@@ -71,7 +71,7 @@ const properties : Property[] = [
         isAvailable: false 
     },
     {
-        image: 'images/london-property.jpg',
+        image: '/images/london-property.jpg',
         title: 'London Flat',
         price: 25,
         location: {
@@ -84,7 +84,7 @@ const properties : Property[] = [
         isAvailable: true
     },
     {
-        image: './images/malaysian-hotel.jpeg',
+        image: '/images/malaysian-hotel.jpeg',
         title: 'Malia Hotel',
         price: 35,
         location: {
@@ -111,9 +111,8 @@ for (let i = 0; i < properties.length; i++) {
     const image = document.createElement('img')
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
-    showDetails(you.permissions, card, properties[i].price)
+    showDetails(true, card, properties[i].price)
     propertyContainer.appendChild(card)
-    console.log(typeof you.permissions)
 }
 
 let count = 0
